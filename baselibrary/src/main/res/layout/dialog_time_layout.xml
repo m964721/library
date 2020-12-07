@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <RelativeLayout
+        android:id="@+id/dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+
+        <TextView
+            android:id="@+id/dialog_left_tv"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/dialog_cancel"
+            android:textColor="@color/color_767676"
+            android:textSize="@dimen/dp_16" />
+
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="请选择账单日"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/dialog_right_tv"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/dialog_ok"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/dp_16" />
+
+
+        <TextView
+            android:id="@+id/title_line_tv"
+            style="@style/line_bg"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title_layout"
+        android:orientation="horizontal">
+
+        <com.app.dialoglibrary.wheel.WheelView
+            android:id="@+id/dialog_wheelview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_320"
+            android:layout_weight="1" />
+
+        <com.app.dialoglibrary.wheel.WheelView
+            android:id="@+id/dialog_wheelview1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_320"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <com.app.dialoglibrary.wheel.WheelView
+            android:id="@+id/dialog_wheelview2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_320"
+            android:layout_weight="1"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
+

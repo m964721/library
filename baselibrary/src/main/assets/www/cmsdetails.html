@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="zepto.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    #title, #info {
+        margin: 0px
+    }
+    .ql-editor img{
+        clear: both;
+        display: block;
+        width:50%;
+        height:60%;
+        margin: 0 auto;
+        margin-bottom : 10px ;
+    }
+    .ql-editor p {
+    span{
+     color:#fff;
+    }
+    }
+
+
+    </style>
+
+</head>
+
+<body style="background:transparent; color:#fff;">
+
+<div id="title" style="text-align: center; font-size: 5.5vh"></div>
+
+<div id="info" style="text-align: center; font-size: 2.5vh">
+    来源:<span id="origin"></span> &nbsp;&nbsp;
+    <span id="create_time"></span>&nbsp;&nbsp;
+    <span id="reading_count"></span>阅读
+</div>
+
+<div id="content" class="ql-editor"></div>
+
+<script>
+
+    var articleId = getQueryVariable("id");
+    var token = getQueryVariable("token");
+    console.log(" getQueryVariable articleId : "+articleId);
+    console.log(" getQueryVariable token : "+token);
+
+
+    $.ajaxSettings.headers = {token:token};
+
+    $.ajax({
+      type: 'get',
+      url: 'https://djcloud.gobestsoft.cn/gbs/api/cms/article/'+ articleId +'?nativeFlag=1' ,
+      data: null,
+      contentType: 'application/json',
+        success: function(data) {
+            console.log("请求数据 : "+JSON.stringify(data));
+            if(null !== data && null !== data.data){
+                $("#content").html(data.data.content);
+                $("#title").html(data.data.title);
+                $("#origin").html(data.data.sourceFrom);
+                $("#create_time").html(data.data.publishedTime);
+                $("#reading_count").html(data.data.browseNum);
+            }
+         }
+    })
+
+    function getQueryVariable(variable) {
+      const query = window.location.search.substring(1);
+      let vars = query.split("&");
+      for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split("=");
+        if (pair[0] === variable) {
+          return pair[1];
+        }
+      }
+      return false;
+    }
+
+
+
+
+</script>
+
+</body>
+
+</html>

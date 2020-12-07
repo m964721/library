@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/choose_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:background="@drawable/dialog_hint_bg"
+        android:textColor="@color/color_4c4c4c"
+        android:text=""
+        />
+    <TextView
+        style="@style/line_bg" />
+</LinearLayout>

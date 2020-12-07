@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_220"
+    android:background="@color/color_eeeeee">
+
+    <TextView
+        android:id="@+id/title_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_25"
+        android:text="—— 分享至 ——"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/dp_14" />
+
+    <LinearLayout
+        android:id="@+id/share_to_wx_friend_layout"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_below="@+id/title_hint_tv"
+        android:layout_marginLeft="-30dp"
+        android:layout_toRightOf="@+id/title_hint_tv"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@mipmap/wx_friend_round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="分享到朋友圈"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/dp_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_to_wx_layout"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_below="@+id/title_hint_tv"
+        android:layout_marginRight="-30dp"
+        android:layout_toLeftOf="@+id/title_hint_tv"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@mipmap/wx_share_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="发送给朋友"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/dp_14" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/color_333333"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/cancle_dialog_tv"
+        android:background="@drawable/btn_cancle_shape"
+        android:text="取消"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40" />
+</RelativeLayout>

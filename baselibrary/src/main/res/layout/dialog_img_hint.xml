@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg_white"
+    android:id="@+id/have_dialog_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/dialog_hint_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/have_dialog_line_tv"
+        style="@style/dialog_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_left_bottom_shape"
+            android:gravity="center"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/have_button_line_tv"
+            style="@style/vertical_line_bg" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_right_bottom_shape"
+            android:gravity="center"
+            android:textColor="@color/color_72b4f7"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/have_all_webview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0B0B0"
+    >
+
+<!--    <include layout="@layout/all_top_titile_layout" />-->
+
+    <ProgressBar
+        android:id="@+id/web_pro_state"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_f9f9f9"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:mirrorForRtl="true"
+        android:progressDrawable="@drawable/webview_progress"
+        android:visibility="gone" />
+
+    <com.app.customviewlibrary.jsbridge.BridgeWebView
+
+        android:id="@+id/bridgewebview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_top_title_layout" />
+
+    <View
+        android:id="@+id/watermarkview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

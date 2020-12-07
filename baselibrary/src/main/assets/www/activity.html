@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="zepto.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+  
+  #content {
+    margin: 0px,
+  }
+  #content img{
+      max-width: 100% ;
+      display: block;
+      height: auto !important;
+  }
+  #content p {
+      margin: 0;
+  }
+
+</style>
+
+</head>
+
+<body style="background:transparent;color:#fff">
+
+<div id="content" class="ql-editor"></div>
+
+<script>
+
+	var url = getQueryVariable("url");
+    var domain = getQueryVariable("domain");
+    var token = getQueryVariable("token");
+    console.log("url : "+url);
+    console.log("domain : "+domain);
+    console.log("token : "+token);
+
+	$.ajaxSettings.headers = { 'domain': domain,token:token };
+
+	$.ajax({
+	  type: 'get',
+	  url: url,
+	  data: null,
+	  contentType: 'application/json',
+		success: function(data) {
+		  $("#content").html(data.data.detail);
+
+		}
+	})
+
+
+	function getQueryVariable(variable) {
+	  const query = window.location.search.substring(1);
+	  let vars = query.split("&");
+	  for (let i = 0; i < vars.length; i++) {
+		let pair = vars[i].split("=");
+		if (pair[0] === variable) {
+		  return pair[1];
+		}
+	  }
+	  return false;
+	}
+</script>
+
+</body>
+
+</html>

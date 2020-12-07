@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webview_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ProgressBar
+        android:id="@+id/web_pro_state"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_f9f9f9"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:mirrorForRtl="true"
+        android:progressDrawable="@drawable/webview_progress"
+        android:visibility="gone" />
+
+    <com.app.customviewlibrary.jsbridge.BridgeWebView
+        android:id="@+id/bridgewebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.app.customviewlibrary.jsbridge.BridgeWebView>
+
+</LinearLayout>

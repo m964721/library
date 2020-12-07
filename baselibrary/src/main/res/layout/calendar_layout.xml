@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_last_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:padding="@dimen/dp_20"
+            android:rotation="180"
+            android:src="@mipmap/right_ring" />
+
+        <TextView
+            android:id="@+id/show_this_month_tv"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_16" />
+
+        <ImageView
+            android:id="@+id/back_next_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:padding="@dimen/dp_20"
+            android:src="@mipmap/right_ring" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/week_hint7_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期日"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期一"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期二"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期三"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint4_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期四"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint5_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期五"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+        <TextView
+            android:id="@+id/week_hint6_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="星期六"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_14" />
+    </LinearLayout>
+
+    <com.app.customviewlibrary.recyclerviewlib.BaseRecycleView
+        android:layout_margin="@dimen/dp_20"
+        android:id="@+id/calendar_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"/>
+</LinearLayout>

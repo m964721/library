@@ -1,0 +1,8 @@
+<!-- 圆角矩形 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="true">
+
+    <corners android:radius="@dimen/dp_15" />
+    <solid android:color="@color/color_bababa" />
+</shape>

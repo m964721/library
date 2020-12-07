@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.customviewlibrary.refreshview.layout.PullRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_data_pullrefreshlayout"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.app.customviewlibrary.refreshview.view.HeadView
+        android:id="@+id/list_data_headView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.app.customviewlibrary.refreshview.view.FootView
+        android:id="@+id/list_data_footView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.app.customviewlibrary.recyclerviewlib.BaseRecycleView
+        android:id="@+id/list_data_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+</com.app.customviewlibrary.refreshview.layout.PullRefreshLayout>
