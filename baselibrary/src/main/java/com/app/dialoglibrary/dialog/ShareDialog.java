@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.gobestsoft.applibrary.R;
-import com.app.toolboxlibrary.InfoDialogListener;
+import com.app.dialoglibrary.InfoDialogListener;
 
 /**
  * 分享dialog

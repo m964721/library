@@ -5,10 +5,8 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.DecelerateInterpolator;
 
-
 /**
- * com.imobpay.tools.AnimationUtils Create at 2016-8-22 上午9:22:41
- * 
+ *
  * @author
  * @说明：
  * @接口：无 @说明：无

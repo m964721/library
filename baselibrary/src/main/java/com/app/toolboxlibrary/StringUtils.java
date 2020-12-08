@@ -235,15 +235,15 @@ public class StringUtils {
      * 将日期格式化   20171112-》 2017/11/12
      *
      * @param data   输入字符
-     * @param splite 分隔符
+     * @param
      * @return
      */
-    public static String formatdatewithsplite(String data, String splite) {
+    public static String formatDateAndSpLite(String data, String spLite) {
         if (null == data) {
             return "";
         }
         if (data.length() == 8) {
-            return data.substring(0, 4) + splite + data.substring(4, 6) + splite + data.substring(6, 8);
+            return data.substring(0, 4) + spLite + data.substring(4, 6) + spLite + data.substring(6, 8);
         }
         return data;
     }
@@ -255,7 +255,7 @@ public class StringUtils {
      * @param data 输入字符
      * @return
      */
-    public static String formatdatewithMonthandDay(String data) {
+    public static String formatDateWithMonthAndDay(String data) {
         if (null == data) {
             return "";
         }
@@ -358,5 +358,9 @@ public class StringUtils {
          return defaulrStr;
         }
         return needCheckStr;
+    }
+
+    public static String fill10(int t) {
+        return t >= 10 ? "" + t : "0" + t;// 三元运算符 t>10时取 ""+t
     }
 }

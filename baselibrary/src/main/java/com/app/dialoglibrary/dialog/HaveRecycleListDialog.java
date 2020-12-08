@@ -12,7 +12,7 @@ import com.app.customviewlibrary.recyclerviewlib.BaseRecycleView;
 import com.gobestsoft.applibrary.R;
 import com.app.dialoglibrary.adapter.DialogItemAdapter;
 import com.app.dialoglibrary.bean.ShareInfo;
-import com.app.toolboxlibrary.InfoDialogListener;
+import com.app.dialoglibrary.InfoDialogListener;
 import com.app.toolboxlibrary.LogUtil;
 
 import java.util.List;

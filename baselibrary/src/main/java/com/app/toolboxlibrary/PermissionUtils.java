@@ -21,21 +21,21 @@ import java.util.List;
 
 public class PermissionUtils {
     public final String ONLY_CARMER[] = {Manifest.permission.CAMERA};//只是用相机
-    public final String CARMER[] = {Manifest.permission.CAMERA,
+    public final String CAMERA[] = {Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};//相机读写
     public final String ALBUM[] = {Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};//读写权限
-//    public final String[] RECORD_AUDIO = {  Manifest.permission.RECORD_AUDIO };//音频
-//    public final String[] CALLPHONE = { Manifest.permission.CALL_PHONE };//打电话
-//    public final String[] READ_CONTACTS = { Manifest.permission.READ_CONTACTS };//读取通讯录
-//    public final String[] CONTACT_GROUP = { Manifest.permission.READ_CONTACTS,
-//            Manifest.permission.WRITE_CONTACTS };//读写通讯录
-//    public final String[] SEND_SMS = {Manifest.permission.SEND_SMS};//发短信
-//    public final String[] READ_SMS = {Manifest.permission.READ_SMS};//读取短信
-//    public final String[] READ_PHONE_STATE = { Manifest.permission.READ_PHONE_STATE };//读取手机信息
-//    public final String[] LOCATION = {Manifest.permission.ACCESS_COARSE_LOCATION,
-//            Manifest.permission.ACCESS_FINE_LOCATION};//开启定位权限
+    public final String[] RECORD_AUDIO = {  Manifest.permission.RECORD_AUDIO };//音频
+    public final String[] CALL_PHONE = { Manifest.permission.CALL_PHONE };//打电话
+    public final String[] READ_CONTACTS = { Manifest.permission.READ_CONTACTS };//读取通讯录
+    public final String[] CONTACT_GROUP = { Manifest.permission.READ_CONTACTS,
+            Manifest.permission.WRITE_CONTACTS };//读写通讯录
+    public final String[] SEND_SMS = {Manifest.permission.SEND_SMS};//发短信
+    public final String[] READ_SMS = {Manifest.permission.READ_SMS};//读取短信
+    public final String[] READ_PHONE_STATE = { Manifest.permission.READ_PHONE_STATE };//读取手机信息
+    public final String[] LOCATION = {Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION};//开启定位权限
 
 
     private int openRequestCode  = -1 ;//默认判断

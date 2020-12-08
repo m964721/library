@@ -14,6 +14,7 @@ import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 
 import java.net.Inet4Address;
+import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -100,93 +101,10 @@ public class PhoneinfoUtils {
 		return false;
 	}
 
-	/**
-	 * 获取手机所在位置的经纬度，返回Location
-	 * getLocationInfo(context).getLongitude(); //经度
-	 * getLocationInfo(context).getLatitude(); //纬度
-	 */
-	/*public static LatLng getLocationInfo(Context context){
-		double latitude = 0;
-		double longitude = 0;
-		Location location = null;		
-		LocationManager locationManager = (LocationManager) 
-				context.getSystemService(Context.LOCATION_SERVICE);
-		if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-			location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-			if (location != null) {
-				latitude = location.getLatitude(); // 纬度
-				longitude = location.getLongitude(); // 经度
-				
-			}
-			if(latitude>0 && longitude>0){
-				LogUtil.showLog("GPS定位结果： 经度: "+ location.getLongitude() +" 纬度: "+ location.getLatitude());
-				return  new LatLng(latitude, longitude);// 纬度,经度
-			}
-		} 
-		// 如果GPS定位不到，就采用网络定位
-		LocationListener locationListener = new LocationListener() {
 
-			// Provider的状态在可用、暂时不可用和无服务三个状态直接切换时触发此函数
-			@Override
-			public void onStatusChanged(String provider, int status,
-					Bundle extras) {
-
-			}
-
-			// Provider被enable时触发此函数，比如GPS被打开
-			@Override
-			public void onProviderEnabled(String provider) {
-
-			}
-
-			// Provider被disable时触发此函数，比如GPS被关闭
-			@Override
-			public void onProviderDisabled(String provider) {
-
-			}
-
-			// 当坐标改变时触发此函数，如果Provider传进相同的坐标，它就不会被触发
-			@Override
-			public void onLocationChanged(Location location) {
-				if (location != null) {
-					LOG.showLog("网络定位结果： 经度: "+ location.getLongitude() +" 纬度: "+ location.getLatitude());
-				}
-			}
-		};
-//		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,
-//						10000, 0, locationListener);  需要更新就加，
-		location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-		if (location != null) {
-			latitude = location.getLatitude(); // 纬度
-			longitude = location.getLongitude(); // 经度
-//			LOG.showLog("手机定位结果： 经度: "+ location.getLongitude() +" 纬度: "+ location.getLatitude());
-		}
-		return  new LatLng(latitude, longitude);// 纬度,经度
-			
-	}*/
-
-
-//	 public static String getLocalIpAddress() {
-//	        try {     
-//	            for (Enumeration<NetworkInterface> en = NetworkInterface     
-//	                    .getNetworkInterfaces(); en.hasMoreElements();) {     
-//	                NetworkInterface intf = en.nextElement();     
-//	                for (Enumeration<InetAddress> enumIpAddr = intf     
-//	                        .getInetAddresses(); enumIpAddr.hasMoreElements();) {     
-//	                    InetAddress inetAddress = enumIpAddr.nextElement();     
-//	                    if (!inetAddress.isLoopbackAddress()) {     
-//	                        return inetAddress.getHostAddress().toString();     
-//	                    }     
-//	                }     
-//	            }     
-//	        } catch (SocketException ex) {     
-//	            Log.e("WifiPreference IpAddress", ex.toString());     
-//	        }     
-//	        return null;     
-//	    }    
-	public static String getlocalip(Context cx) {
+	public static String getWifiIp(Context cx) {
 		WifiManager wifiManager = (WifiManager) cx.getSystemService(Context.WIFI_SERVICE);
-		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+		@SuppressLint("MissingPermission") WifiInfo wifiInfo = wifiManager.getConnectionInfo();
 		int ipAddress = wifiInfo.getIpAddress();
 
 		LogUtil.showLog("int ip ", ipAddress + "");
@@ -195,7 +113,7 @@ public class PhoneinfoUtils {
 				+ (ipAddress >> 16 & 0xff) + "." + (ipAddress >> 24 & 0xff));
 	}
 
-	public static String getPsdnIp() {
+	public static String getNetworkIp() {
 		try {
 			for (Enumeration<NetworkInterface> en = NetworkInterface
 					.getNetworkInterfaces(); en.hasMoreElements(); ) {
@@ -206,12 +124,11 @@ public class PhoneinfoUtils {
 					InetAddress inetAddress = enumIpAddr.nextElement();
 					if (!inetAddress.isLoopbackAddress()
 							&& inetAddress instanceof Inet4Address) {
-
-						// if (!inetAddress.isLoopbackAddress() && inetAddress
-						// instanceof Inet6Address) {
-
 						return inetAddress.getHostAddress().toString();
 
+					}else if (!inetAddress.isLoopbackAddress() && inetAddress
+							instanceof Inet6Address) {
+						return inetAddress.getHostAddress().toString();
 					}
 
 				}
@@ -226,7 +143,7 @@ public class PhoneinfoUtils {
 
 	}
 
-	public static int inetAddressToInt(InetAddress inetAddr)
+	public static int netAddressToInt(InetAddress inetAddr)
 			throws IllegalArgumentException {
 		byte[] addr = inetAddr.getAddress();
 		if (addr.length != 4) {

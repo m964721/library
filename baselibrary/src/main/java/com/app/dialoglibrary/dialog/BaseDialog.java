@@ -3,7 +3,7 @@ package com.app.dialoglibrary.dialog;
 import android.app.Dialog;
 import android.content.Context;
 
-import com.app.toolboxlibrary.InfoDialogListener;
+import com.app.dialoglibrary.InfoDialogListener;
 import com.gobestsoft.applibrary.R;
 
 

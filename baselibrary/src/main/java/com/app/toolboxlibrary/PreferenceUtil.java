@@ -17,7 +17,7 @@ public class PreferenceUtil {
 
 	private static PreferenceUtil preferenceUtil ;
 
-	private SharedPreferences shareditorPreferences ;
+	private SharedPreferences sharedPreferences ;
 
 	private Editor editor;
 
@@ -26,11 +26,11 @@ public class PreferenceUtil {
 	}
 
 	public void init(Context context) {
-		if (shareditorPreferences == null || editor == null) {
+		if (sharedPreferences == null || editor == null) {
 			try {
-				shareditorPreferences = context.getSharedPreferences(
+				sharedPreferences = context.getSharedPreferences(
 						PREFERENCE_NAME, Context.MODE_PRIVATE);
-				editor = shareditorPreferences.edit();
+				editor = sharedPreferences.edit();
 			} catch (Exception e) {
 			}
 		}
@@ -49,7 +49,7 @@ public class PreferenceUtil {
 	}
 
 	public long getLong(String key, long defaultlong) {
-		return shareditorPreferences.getLong(key, defaultlong);
+		return sharedPreferences.getLong(key, defaultlong);
 	}
 
 	public void saveBoolean(String key, boolean value) {
@@ -58,7 +58,7 @@ public class PreferenceUtil {
 	}
 
 	public boolean getBoolean(String key, boolean defaultboolean) {
-		return shareditorPreferences.getBoolean(key, defaultboolean);
+		return sharedPreferences.getBoolean(key, defaultboolean);
 	}
 
 	public void saveInt(String key, int value) {
@@ -69,11 +69,11 @@ public class PreferenceUtil {
 	}
 
 	public int getInt(String key, int defaultInt) {
-		return shareditorPreferences.getInt(key, defaultInt);
+		return sharedPreferences.getInt(key, defaultInt);
 	}
 
 	public String getString(String key, String defaultInt) {
-		return shareditorPreferences.getString(key, defaultInt);
+		return sharedPreferences.getString(key, defaultInt);
 	}
 
 	public void saveString(String key, String value) {

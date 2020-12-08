@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.app.toolboxlibrary.InfoDialogListener;
+import com.app.dialoglibrary.InfoDialogListener;
 import com.app.toolboxlibrary.PhoneinfoUtils;
 import com.gobestsoft.applibrary.R;
 

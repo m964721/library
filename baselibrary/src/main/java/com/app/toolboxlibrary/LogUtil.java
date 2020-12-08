@@ -15,34 +15,34 @@ public class LogUtil {
      * @param msg
      */
 
-    public static boolean logdebug = true;
+    public static boolean logDebug = true;
     private static String TAG = "LogUtil";
 
-    public static void setLogdebug(boolean logdebug) {
-        LogUtil.logdebug = logdebug;
+    public static void setLogDebug(boolean logdebug) {
+        LogUtil.logDebug = logdebug;
     }
 
     public static void printInfo(String msg) {
-        if (logdebug) {
+        if (logDebug) {
             Log.i(TAG, msg);
         }
     }
 
     public static void printInfo(String tag, String msg) {
-        if (logdebug) {
+        if (logDebug) {
             Log.i(tag, msg);
         }
     }
 
 
     public static void showLog(String msg) {
-        if (logdebug) {
+        if (logDebug) {
             Log.i(TAG, msg);
         }
     }
 
     public static void showLog(String TAG, String msg) {
-        if (logdebug && null != msg) {
+        if (logDebug && null != msg) {
             Log.i(TAG, msg);
         }
     }

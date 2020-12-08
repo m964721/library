@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by PPH on 18/3/9.
- */
-
 public class ListUtils {
+
     public static int backArrayListSize( ArrayList dataList ){
         int size = 0 ;
         if( null != dataList && dataList.size()>0){

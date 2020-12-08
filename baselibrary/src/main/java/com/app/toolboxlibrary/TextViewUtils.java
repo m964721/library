@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class TextViewUtils {
 
     /**
-     * textview首行缩进
+     * TextView 首行缩进
      *
      * @param textView
      * @param data
@@ -28,10 +28,7 @@ public class TextViewUtils {
     /**
      * 显示不同颜色
      */
-    public static void showMoreColor(TextView textView,
-                                     String data[] ,
-                                     String color[]
-    ) {
+    public static void showMoreColor(TextView textView, String data[] , String color[]) {
         if (null == textView) {
             return;
         }

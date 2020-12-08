@@ -36,12 +36,6 @@ public class TransformUtil {
         return (int) (pxValue / fontScale + 0.5f);
     }
 
-    public static int getDmDensityDpi(Context context) {  
-    	DisplayMetrics dm = context.getApplicationContext().getResources().getDisplayMetrics();  
-        // 设置DensityDpi  
-    	return dm.densityDpi;
-    }
-
     /**
      * px与dp转换的系数
      */
