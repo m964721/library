@@ -12,7 +12,7 @@ import com.app.customviewlibrary.recyclerviewlib.BaseInfo;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleAdapter;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleConfig;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleViewHolder;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 import java.util.List;
 

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.app.customviewlibrary.refreshview.layout.BaseFooterView;
 import com.app.customviewlibrary.refreshview.support.type.LayoutType;
 import com.app.customviewlibrary.refreshview.support.utils.AnimUtil;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 /**
  * Created by PPH on 18/1/23.

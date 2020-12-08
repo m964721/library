@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.customviewlibrary.calendar.CalendarLayout;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 /**
  * 包含日历的选择弹窗

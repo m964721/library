@@ -2,7 +2,7 @@ package com.app.dialoglibrary.wheel;
 
 import android.content.Context;
 
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 import java.util.List;
 

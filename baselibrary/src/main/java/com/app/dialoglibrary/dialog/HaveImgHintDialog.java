@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.app.dialoglibrary.InfoDialogListener;
 import com.app.toolboxlibrary.PhoneinfoUtils;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 /**
  * 弹窗提示

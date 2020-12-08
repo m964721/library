@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 import com.app.dialoglibrary.wheel.ArrayWheelAdapter;
 import com.app.dialoglibrary.wheel.OnWheelChangedListener;
 import com.app.dialoglibrary.wheel.WheelView;

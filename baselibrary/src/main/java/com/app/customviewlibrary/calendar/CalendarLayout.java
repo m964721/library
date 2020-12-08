@@ -15,7 +15,7 @@ import com.app.customviewlibrary.recyclerviewlib.BaseRecycleItemViewCLick;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleView;
 import com.app.toolboxlibrary.DateUtil;
 import com.app.toolboxlibrary.LogUtil;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 import java.util.ArrayList;
 import java.util.Date;

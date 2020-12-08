@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 import com.app.toolboxlibrary.LogUtil;
 import com.app.toolboxlibrary.StringUtils;
 

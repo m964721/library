@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 import com.app.dialoglibrary.InfoDialogListener;
 import com.app.toolboxlibrary.ListUtils;
 

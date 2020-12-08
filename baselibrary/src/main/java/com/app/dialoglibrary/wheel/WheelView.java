@@ -15,7 +15,7 @@ import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 import java.util.LinkedList;
 import java.util.List;

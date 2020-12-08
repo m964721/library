@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleItemClick;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleView;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 import com.app.dialoglibrary.adapter.DialogItemAdapter;
 import com.app.dialoglibrary.bean.ShareInfo;
 import com.app.dialoglibrary.InfoDialogListener;

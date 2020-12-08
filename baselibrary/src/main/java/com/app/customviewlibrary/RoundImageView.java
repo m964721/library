@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.app.toolboxlibrary.TransformUtil;
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 /**
  * 圆角的ImageView

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.gobestsoft.applibrary.R;
+import com.app.library.R;
 
 /**
  * Created by PPH on 18/3/13.
