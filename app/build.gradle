@@ -22,34 +22,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':baselibrary')
-    //第三方下载sdk
-    implementation 'com.liulishuo.filedownloader:library:1.6.9'
-    implementation 'com.youth.banner:banner:1.4.10'
-    //google zxing 扫码
-    implementation 'com.google.zxing:core:3.2.1'
 
-    //网络框架
-    implementation 'com.squareup.okhttp3:okhttp:4.3.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
-    implementation('com.squareup.retrofit2:converter-simplexml:2.1.0') {
-        exclude group: 'xpp3', module: 'xpp3'
-        exclude group: 'stax', module: 'stax-api'
-        exclude group: 'stax', module: 'stax'
-    }
-    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
-    //noinspection GradleDependency 图片加载
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    //阿里FastJson
-    implementation 'com.alibaba:fastjson:1.1.70.android'
-    //noinspection GradleDynamicVersion 微信分享
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
-
-    //高德定位
-    implementation 'com.amap.api:location:4.3.0'
-    implementation 'com.amap.api:map2d:6.0.0'
-
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
 }
