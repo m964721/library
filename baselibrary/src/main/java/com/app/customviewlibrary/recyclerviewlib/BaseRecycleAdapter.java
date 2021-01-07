@@ -21,7 +21,7 @@ public abstract class BaseRecycleAdapter< E extends BaseRecycleViewHolder>
         extends RecyclerView.Adapter<E>{
     BaseRecycleItemClick baseRecycleItemClick;
     BaseRecycleItemLongClick baseRecycleItemLongClick;
-    BaseRecycleItemViewCLick baseRecycleItemViewCLick;
+    BaseRecycleItemChildrenViewCLick baseRecycleItemViewCLick;
     BaseRecycleViewHolder baseRecycleViewHolder;
     protected LayoutInflater layoutInflater;
     protected Context context;
@@ -93,7 +93,7 @@ public abstract class BaseRecycleAdapter< E extends BaseRecycleViewHolder>
         this.baseRecycleItemLongClick = baseRecycleItemLongClick;
     }
 
-    public void setBaseRecycleItemViewCLick(BaseRecycleItemViewCLick baseRecycleItemViewCLick) {
+    public void setBaseRecycleItemChildrenViewCLick(BaseRecycleItemChildrenViewCLick baseRecycleItemViewCLick) {
         this.baseRecycleItemViewCLick = baseRecycleItemViewCLick;
     }
 
@@ -121,9 +121,9 @@ public abstract class BaseRecycleAdapter< E extends BaseRecycleViewHolder>
         return baseRecycleItemLongClick;
     }
 
-    public BaseRecycleItemViewCLick getBaseRecycleItemViewCLick() {
+    public BaseRecycleItemChildrenViewCLick getBaseRecycleItemViewCLick() {
         if (null == baseRecycleItemViewCLick) {
-            baseRecycleItemViewCLick = new BaseRecycleItemViewCLick() {
+            baseRecycleItemViewCLick = new BaseRecycleItemChildrenViewCLick() {
                 @Override
                 public void onItemChildrenViewClickListener(int viewClickFlag, int position) {
 

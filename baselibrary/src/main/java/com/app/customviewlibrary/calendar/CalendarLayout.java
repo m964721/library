@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleConfig;
-import com.app.customviewlibrary.recyclerviewlib.BaseRecycleItemViewCLick;
+import com.app.customviewlibrary.recyclerviewlib.BaseRecycleItemChildrenViewCLick;
 import com.app.customviewlibrary.recyclerviewlib.BaseRecycleView;
 import com.app.toolboxlibrary.DateUtil;
 import com.app.toolboxlibrary.LogUtil;
@@ -85,7 +85,7 @@ public class CalendarLayout extends LinearLayout {
         calendarRecycleview = findViewById(R.id.calendar_recycleview);
         calendarRecycleview.setLayoutManager(new GridLayoutManager(context, 7));
 
-        calendarRecycleview.setOnBaseRecycleItemViewCLick(new BaseRecycleItemViewCLick() {
+        calendarRecycleview.setBaseRecycleItemChildrenViewCLick(new BaseRecycleItemChildrenViewCLick() {
             @Override
             public void onItemChildrenViewClickListener(int viewClickFlag, int position) {
                 switch (viewClickFlag) {

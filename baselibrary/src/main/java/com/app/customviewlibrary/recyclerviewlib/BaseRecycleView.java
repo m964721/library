@@ -14,7 +14,7 @@ public class BaseRecycleView extends RecyclerView {
     BaseRecycleAdapter baseRecycleAdapter ;
     BaseRecycleItemClick baseRecycleItemClick ;
     BaseRecycleItemLongClick baseRecycleItemLongClick ;
-    BaseRecycleItemViewCLick baseRecycleItemViewCLick ;
+    BaseRecycleItemChildrenViewCLick baseRecycleItemChildrenViewCLick ;
 
 
     public BaseRecycleView(Context context) {
@@ -48,8 +48,8 @@ public class BaseRecycleView extends RecyclerView {
         this.baseRecycleItemLongClick = baseRecycleItemLongClick;
         toRefresh();
     }
-    public void setOnBaseRecycleItemViewCLick(BaseRecycleItemViewCLick baseRecycleItemViewCLick) {
-        this.baseRecycleItemViewCLick = baseRecycleItemViewCLick;
+    public void setBaseRecycleItemChildrenViewCLick(BaseRecycleItemChildrenViewCLick baseRecycleItemViewCLick) {
+        this.baseRecycleItemChildrenViewCLick = baseRecycleItemViewCLick;
         toRefresh();
     }
 
@@ -60,8 +60,8 @@ public class BaseRecycleView extends RecyclerView {
         if(null != baseRecycleAdapter && null != baseRecycleItemLongClick){
             baseRecycleAdapter.setBaseRecycleItemLongClick(baseRecycleItemLongClick);
         }
-        if(null != baseRecycleAdapter && null != baseRecycleItemViewCLick){
-            baseRecycleAdapter.setBaseRecycleItemViewCLick(baseRecycleItemViewCLick);
+        if(null != baseRecycleAdapter && null != baseRecycleItemChildrenViewCLick){
+            baseRecycleAdapter.setBaseRecycleItemChildrenViewCLick(baseRecycleItemChildrenViewCLick);
         }
     }
 
